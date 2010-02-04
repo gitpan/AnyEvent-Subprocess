@@ -38,12 +38,6 @@ has 'run_class' => (
     },
 );
 
-has 'run' => (
-    is      => 'ro',
-    lazy    => 1,
-    builder => '_build_run',
-);
-
 has 'verbose' => (
     is       => 'ro',
     isa      => 'Bool',
@@ -100,6 +94,7 @@ sub _build_code_args {
 # them to the parent
 sub _run_child {
     my $self = shift;
+    my $args = shift || {};
 
     # scope_guard {
     #     exit 255;
@@ -107,7 +102,7 @@ sub _run_child {
 
     try {
         $self->_child_setup_hook;
-        $self->code->({$self->_build_code_args});
+        $self->code->({%$args, $self->_build_code_args});
         $self->_child_finalize_hook;
     }
     catch {
@@ -119,8 +114,14 @@ sub _run_child {
     return;
 }
 
-sub _build_run {
-    my $self = shift;
+sub run {
+    my $orig_self = shift;
+    my $args_hash = shift;
+
+    confess "argument to run must be a hashref, not $args_hash"
+      if defined $args_hash && !(ref $args_hash && ref $args_hash eq 'HASH');
+
+    my $self = $orig_self->clone;
 
     my $run = $self->_init_run_instance;
 
@@ -131,7 +132,7 @@ sub _build_run {
     confess "fork error: $!" unless defined $child_pid;
 
     unless($child_pid){
-        $self->_run_child();
+        $self->_run_child($args_hash);
     }
 
     $run->child_pid($child_pid);

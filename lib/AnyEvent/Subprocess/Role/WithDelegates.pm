@@ -11,6 +11,8 @@ parameter type => (
 );
 
 role {
+    with 'MooseX::Clone';
+
     my $p = shift;
 
     has 'delegate_list' => (
@@ -23,6 +25,7 @@ role {
     );
 
     has 'delegate_ordering' => (
+        traits     => ['NoClone'],
         init_arg   => undef,
         reader     => '_delegates',
         isa        => ArrayRef[$p->type],
@@ -32,7 +35,7 @@ role {
     );
 
     has 'delegates_table' => (
-        traits     => ['Hash'],
+        traits     => ['Hash', 'NoClone'],
         init_arg   => undef,
         isa        => HashRef[$p->type],
         auto_deref => 1,
@@ -71,6 +74,11 @@ role {
         };
     };
 
+    after 'clone' => sub {
+        my $self = shift;
+        $self->_delegates; # vivify noclones after cloning
+    };
+
     method 'BUILD' => sub {
         my $self = shift;
         $self->_delegates;
@@ -81,7 +89,7 @@ role {
 
         return map {
             my $d = $_;
-            $d->$method(@args);
+            $d->$method($self, @args);
         } $self->_delegates;
     };
 };
@@ -128,7 +136,7 @@ that name.
 
 =head2 _invoke_delegates($method, @args)
 
-Invokes C<< $delegate->$method(@args) >> on each delegate (in the
+Invokes C<< $delegate->$method($self, @args) >> on each delegate (in the
 order they were passed to the constructor).  Returns a list of the
 return values of each delegate.
 

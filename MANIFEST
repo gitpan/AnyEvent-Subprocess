@@ -1,6 +1,7 @@
 .gitignore
 Changes
 examples/backtick.pl
+examples/synopsis.pl
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
@@ -18,6 +19,7 @@ lib/AnyEvent/Subprocess/Delegate.pm
 lib/AnyEvent/Subprocess/Done.pm
 lib/AnyEvent/Subprocess/Done/Delegate.pm
 lib/AnyEvent/Subprocess/Done/Delegate/CaptureHandle.pm
+lib/AnyEvent/Subprocess/Done/Delegate/State.pm
 lib/AnyEvent/Subprocess/Easy.pm
 lib/AnyEvent/Subprocess/Handle.pm
 lib/AnyEvent/Subprocess/Job.pm
@@ -44,6 +46,7 @@ MANIFEST.SKIP
 META.yml
 t/basic.t
 t/capture-basic.t
+t/clone.t
 t/death-by-stdin.t
 t/easy-qx.t
 t/exit-code.t

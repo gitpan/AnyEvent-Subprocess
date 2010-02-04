@@ -18,34 +18,43 @@ for my $a (qw/child_setup_hook child_finalize_hook
     );
 }
 
+has 'state' => (
+    is       => 'ro',
+    isa      => 'HashRef',
+    required => 1,
+    default  => sub { +{} },
+);
+
 sub build_run_delegates {
     my $self = shift;
     return AnyEvent::Subprocess::Running::Delegate::Callback->new(
           name            => $self->name,
           completion_hook => $self->_completion_hook,
+          state           => $self->state,
       );
 }
 
 sub child_setup_hook {
-    my ($self) = @_;
-    $self->_child_setup_hook->($self);
+    my ($self, $job) = @_;
+    $self->_child_setup_hook->($self, $job);
 }
 
 sub child_finalize_hook {
-    my ($self) = @_;
-    $self->_child_finalize_hook->($self);
+    my ($self, $job) = @_;
+    $self->_child_finalize_hook->($self, $job);
 }
 
 sub parent_setup_hook {
-    my ($self, $run) = @_;
-    $self->_parent_setup_hook->($self, $run);
+    my ($self, $job, $run) = @_;
+    $self->_parent_setup_hook->($self, $job, $run);
 }
 
 sub parent_finalize_hook {
-    my ($self) = @_;
-    $self->_parent_finalize_hook->($self);
+    my ($self, $job) = @_;
+    $self->_parent_finalize_hook->($self, $job);
 }
 
+# XXX: add this
 sub build_code_args {}
 
 1;
