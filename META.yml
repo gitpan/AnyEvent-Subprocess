@@ -23,9 +23,10 @@ no_index:
     - t
 requires:
   AnyEvent: 5.2
-  Event::Join: 0.02
+  Event::Join: 0.04
   IO::Pty: 0
   Moose: 0.91
+  MooseX::Clone: 0
   MooseX::Role::Parameterized: 0
   MooseX::StrictConstructor: 0
   MooseX::Types: 0.19
@@ -34,4 +35,4 @@ requires:
   namespace::autoclean: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02

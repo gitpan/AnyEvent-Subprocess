@@ -47,6 +47,19 @@ role {
         },
     );
 
+    around clone => sub {
+        my ($orig, $self, @args) = @_;
+
+        my @cloned_delegates = map {
+            blessed $_ && $_->can('clone') ? $_->clone : $_
+        } $self->_delegate_list;
+
+        return $self->$orig(
+            delegate_list => \@cloned_delegates,
+            @args,
+        );
+    };
+
     before 'delegate' => sub {
         my ($self, $delegate) = @_;
         confess "No delegate named '$delegate'" if !$self->_delegate_exists($delegate);

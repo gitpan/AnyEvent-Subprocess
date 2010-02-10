@@ -2,11 +2,13 @@ package AnyEvent::Subprocess;
 use Moose;
 with 'AnyEvent::Subprocess::Job';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use AnyEvent::Subprocess::DefaultDelegates;
 
 use namespace::autoclean;
+
+__PACKAGE__->meta->make_immutable;
 
 1;
 

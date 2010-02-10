@@ -29,6 +29,7 @@ lib/AnyEvent/Subprocess/Job/Delegate/CaptureHandle.pm
 lib/AnyEvent/Subprocess/Job/Delegate/CompletionCondvar.pm
 lib/AnyEvent/Subprocess/Job/Delegate/Handle.pm
 lib/AnyEvent/Subprocess/Job/Delegate/MonitorHandle.pm
+lib/AnyEvent/Subprocess/Job/Delegate/PrintError.pm
 lib/AnyEvent/Subprocess/Job/Delegate/Pty.pm
 lib/AnyEvent/Subprocess/Role/WithDelegates.pm
 lib/AnyEvent/Subprocess/Role/WithDelegates/Manager.pm
