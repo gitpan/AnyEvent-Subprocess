@@ -6,9 +6,6 @@ use AnyEvent::Subprocess::Types qw(JobDelegate SubprocessCode);
 use Try::Tiny;
 
 use namespace::autoclean;
-
-our $VERSION = '0.01';
-
 use Moose::Role;
 
 with 'AnyEvent::Subprocess::Role::WithDelegates' => {
@@ -112,6 +109,10 @@ sub run {
     my $run = $self->_init_run_instance;
 
     $self->_parent_setup_hook($run);
+
+    # an event loop must exist before the fork, in case the child
+    # exits before we create the watcher
+    AnyEvent::detect();
 
     # TODO: configurable/delegate-able fork
     my $child_pid = fork;
