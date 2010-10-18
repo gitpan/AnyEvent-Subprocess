@@ -1,0 +1,13 @@
+
+
+This archive contains the distribution AnyEvent-Subprocess,
+version 1.102910:
+
+  flexible, OO, asynchronous process spawning and management
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+

@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Running::Delegate::Callback;
+BEGIN {
+  $AnyEvent::Subprocess::Running::Delegate::Callback::VERSION = '1.102910';
+}
+# ABSTRACT: the C<Running> part of the Callback delegate
 use Moose;
 
 use AnyEvent::Subprocess::Done::Delegate::State; # name change
@@ -38,3 +42,37 @@ sub build_events {}
 __PACKAGE__->meta->make_immutable;
 
 1;
+
+
+
+=pod
+
+=head1 NAME
+
+AnyEvent::Subprocess::Running::Delegate::Callback - the C<Running> part of the Callback delegate
+
+=head1 VERSION
+
+version 1.102910
+
+=head1 DESCRIPTION
+
+Calls the completion hook that was setup in the Job delegate, passes
+saved state to the Done delegate.
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
+

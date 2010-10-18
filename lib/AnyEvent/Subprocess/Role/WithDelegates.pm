@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Role::WithDelegates;
+BEGIN {
+  $AnyEvent::Subprocess::Role::WithDelegates::VERSION = '1.102910';
+}
+# ABSTRACT: paramaterized role consumed by classes that have delegates
 use MooseX::Role::Parameterized;
 
 use MooseX::Types::Moose qw(HashRef ArrayRef Str);
@@ -109,11 +113,17 @@ role {
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
 AnyEvent::Subprocess::Role::WithDelegates - paramaterized role consumed by classes that have delegates
+
+=head1 VERSION
+
+version 1.102910
 
 =head1 DESCRIPTION
 
@@ -167,3 +177,20 @@ L<AnyEvent::Subprocess::Job>
 L<AnyEvent::Subprocess::Running>
 
 L<AnyEvent::Subprocess::Done>
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
+

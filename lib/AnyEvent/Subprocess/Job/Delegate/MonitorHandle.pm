@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Job::Delegate::MonitorHandle;
+BEGIN {
+  $AnyEvent::Subprocess::Job::Delegate::MonitorHandle::VERSION = '1.102910';
+}
+# ABSTRACT: monitor a handle for input and invoke callbacks with that input
 use AnyEvent::Subprocess::Running::Delegate::MonitorHandle;
 use AnyEvent::Subprocess::Types qw(CodeList WhenToCallBack);
 use MooseX::Types::Moose qw(Str);
@@ -86,11 +90,17 @@ __PACKAGE__->meta->make_immutable;
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
-AnyEvent::Subprocess::Running::Delegate::MonitorHandle - monitor a handle for input, invoke callbacks with that input
+AnyEvent::Subprocess::Job::Delegate::MonitorHandle - monitor a handle for input and invoke callbacks with that input
+
+=head1 VERSION
+
+version 1.102910
 
 =head1 DESCRIPTION
 
@@ -114,3 +124,20 @@ whenever there is data in the read buffer.
 =head1 METHODS
 
 Don't call us, we'll call you.
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
+

@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Job::Delegate::Handle;
+BEGIN {
+  $AnyEvent::Subprocess::Job::Delegate::Handle::VERSION = '1.102910';
+}
+# ABSTRACT: share a filehandle or socket with the child
 use AnyEvent;
 use AnyEvent::Util qw(portable_pipe portable_socketpair);
 use AnyEvent::Subprocess::Handle;
@@ -165,11 +169,17 @@ __PACKAGE__->meta->make_immutable;
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
 AnyEvent::Subprocess::Job::Delegate::Handle - share a filehandle or socket with the child
+
+=head1 VERSION
+
+version 1.102910
 
 =head1 INITARGS
 
@@ -207,3 +217,20 @@ C<push_read> and C<push_write>, but all of
 L<AnyEvent::Handle|AnyEvent::Handle>'s operations are available.  See
 that manpage for further details; there is a lot you can do, and this
 module makes it all very easy.
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
+

@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Job;
+BEGIN {
+  $AnyEvent::Subprocess::Job::VERSION = '1.102910';
+}
+# ABSTRACT: role representing a runnable job
 
 use AnyEvent;
 use AnyEvent::Subprocess::Types qw(JobDelegate SubprocessCode);
@@ -130,11 +134,17 @@ sub run {
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
 AnyEvent::Subprocess::Job - role representing a runnable job
+
+=head1 VERSION
+
+version 1.102910
 
 =head1 ATTRIBUTES
 
@@ -176,4 +186,20 @@ All the methods in this role are internal, and include:
 If you want to have your own code run at various phases in the
 process, implement a delegate.  See
 L<AnyEvent::Subprocess::Job::Delegate> for details.
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
 

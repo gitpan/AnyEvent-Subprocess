@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Running::Delegate::Handle;
+BEGIN {
+  $AnyEvent::Subprocess::Running::Delegate::Handle::VERSION = '1.102910';
+}
+# ABSTRACT: Running part of the Handle delegate
 use AnyEvent::Subprocess::Handle;
 use AnyEvent::Subprocess::Done::Delegate::Handle;
 
@@ -68,3 +72,28 @@ sub BUILD {
 __PACKAGE__->meta->make_immutable;
 
 1;
+
+__END__
+=pod
+
+=head1 NAME
+
+AnyEvent::Subprocess::Running::Delegate::Handle - Running part of the Handle delegate
+
+=head1 VERSION
+
+version 1.102910
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+

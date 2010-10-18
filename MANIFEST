@@ -1,18 +1,12 @@
-.gitignore
 Changes
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README
+dist.ini
 examples/backtick.pl
 examples/synopsis.pl
-inc/Module/AutoInstall.pm
-inc/Module/Install.pm
-inc/Module/Install/AutoInstall.pm
-inc/Module/Install/Base.pm
-inc/Module/Install/Can.pm
-inc/Module/Install/Fetch.pm
-inc/Module/Install/Include.pm
-inc/Module/Install/Makefile.pm
-inc/Module/Install/Metadata.pm
-inc/Module/Install/Win32.pm
-inc/Module/Install/WriteAll.pm
 lib/AnyEvent/Subprocess.pm
 lib/AnyEvent/Subprocess/DefaultDelegates.pm
 lib/AnyEvent/Subprocess/Delegate.pm
@@ -45,10 +39,6 @@ lib/AnyEvent/Subprocess/Running/Delegate/Handle.pm
 lib/AnyEvent/Subprocess/Running/Delegate/MonitorHandle.pm
 lib/AnyEvent/Subprocess/Running/Delegate/Timeout.pm
 lib/AnyEvent/Subprocess/Types.pm
-Makefile.PL
-MANIFEST			This list of files
-MANIFEST.SKIP
-META.yml
 t/00-info.t
 t/basic.t
 t/capture-basic.t
@@ -63,6 +53,7 @@ t/monitorhandle.t
 t/open-to-fd.t
 t/pty-basic.t
 t/pty-control.t
+t/release-pod-syntax.t
 t/socket.t
 t/system.t
 t/timeout.t

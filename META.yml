@@ -1,39 +1,186 @@
 ---
 abstract: 'flexible, OO, asynchronous process spawning and management'
 author:
-  - 'Jonathan Rockway C<< <jrockway@cpan.org> >>'
+  - 'Jonathan Rockway <jrockway@cpan.org>'
 build_requires:
-  ExtUtils::MakeMaker: 6.42
+  Scalar::Util: 0
   Test::Exception: 0
   Test::More: 0
   ok: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 1.00'
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.102342, CPAN::Meta::Converter version 2.101670'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: AnyEvent-Subprocess
-no_index:
-  directory:
-    - examples
-    - inc
-    - t
 requires:
-  AnyEvent: 5.2
-  Event::Join: 0.04
+  AnyEvent: 0
+  AnyEvent::Handle: 0
+  AnyEvent::Util: 0
+  Carp: 0
+  EV: 3.9
+  Event::Join: 0.05
   IO::Pty: 0
-  Moose: 0.91
+  JSON: 2
+  Moose: 1.15
+  Moose::Role: 0
   MooseX::Clone: 0
   MooseX::Role::Parameterized: 0
   MooseX::StrictConstructor: 0
-  MooseX::Types: 0.19
+  MooseX::Types: 0
+  MooseX::Types::Moose: 0
   MooseX::Types::Signal: 0
   POSIX: 0
+  Sub::Exporter: 0
   Try::Tiny: 0
   namespace::autoclean: 0
+  namespace::clean: 0
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.03
+  repository: http://github.com/jrockway/anyevent-subprocess
+version: 1.102910
+x_Dist_Zilla:
+  plugins:
+    -
+      class: Dist::Zilla::Plugin::AutoPrereqs
+      name: AutoPrereqs
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: requires
+      name: Prereqs
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: requires
+      name: Test
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::AutoVersion
+      name: AutoVersion
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::PkgVersion
+      name: PkgVersion
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::MetaConfig
+      name: MetaConfig
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::NextRelease
+      name: NextRelease
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::PodSyntaxTests
+      name: PodSyntaxTests
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::PodWeaver
+      name: PodWeaver
+      version: 3.101640
+    -
+      class: Dist::Zilla::Plugin::Repository
+      name: Repository
+      version: 0.13
+    -
+      class: Dist::Zilla::Plugin::GatherDir
+      name: GatherDir
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::PruneCruft
+      name: PruneCruft
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::ManifestSkip
+      name: ManifestSkip
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::MetaYAML
+      name: MetaYAML
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::License
+      name: License
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::Readme
+      name: Readme
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::ExtraTests
+      name: ExtraTests
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::ExecDir
+      name: ExecDir
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::ShareDir
+      name: ShareDir
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::MakeMaker
+      name: MakeMaker
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::Manifest
+      name: Manifest
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::TestRelease
+      name: TestRelease
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: '@Git/Check'
+      version: 1.101801
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: '@Git/Commit'
+      version: 1.101801
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@Git/Tag'
+      version: 1.101801
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: '@Git/Push'
+      version: 1.101801
+    -
+      class: Dist::Zilla::Plugin::ConfirmRelease
+      name: ConfirmRelease
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::UploadToCPAN
+      name: UploadToCPAN
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':InstallModules'
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':TestFiles'
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':ExecFiles'
+      version: 4.102342
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':ShareFiles'
+      version: 4.102342
+  zilla:
+    class: Dist::Zilla::Dist::Builder
+    config:
+      is_trial: 0
+    version: 4.102342

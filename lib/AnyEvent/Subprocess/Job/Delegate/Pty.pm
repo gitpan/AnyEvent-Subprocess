@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Job::Delegate::Pty;
+BEGIN {
+  $AnyEvent::Subprocess::Job::Delegate::Pty::VERSION = '1.102910';
+}
+# ABSTRACT: give the child a pseudo-terminal
 use IO::Pty;
 use namespace::autoclean;
 
@@ -127,11 +131,17 @@ __PACKAGE__->meta->make_immutable;
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
 AnyEvent::Subprocess::Job::Delegate::Pty - give the child a pseudo-terminal
+
+=head1 VERSION
+
+version 1.102910
 
 =head1 DESCRIPTION
 
@@ -163,4 +173,20 @@ parameters in the child process.
 (If you don't know what "raw mode" and "cooked mode" are, you should
 read up on UNIX terminals.  You might really want a pipe, not a pseudo
 terminal.)
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
 

@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Done;
+BEGIN {
+  $AnyEvent::Subprocess::Done::VERSION = '1.102910';
+}
+# ABSTRACT: represents a completed subprocess run
 use Moose;
 
 use AnyEvent::Subprocess::Types qw(DoneDelegate);
@@ -51,11 +55,17 @@ __PACKAGE__->meta->make_immutable;
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
 AnyEvent::Subprocess::Done - represents a completed subprocess run
+
+=head1 VERSION
+
+version 1.102910
 
 =head1 SYNOPSIS
 
@@ -109,4 +119,20 @@ core, exited due to a signal, or exited with a value other than 0.
 L<AnyEvent::Subprocess>
 
 L<AnyEvent::Subprocess::Role::WithDelegates>
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
 

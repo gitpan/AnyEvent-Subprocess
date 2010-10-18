@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Delegate;
+BEGIN {
+  $AnyEvent::Subprocess::Delegate::VERSION = '1.102910';
+}
+# ABSTRACT: role representing a delegate
 use Moose::Role;
 
 with 'MooseX::Clone';
@@ -11,11 +15,17 @@ has 'name' => (
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
 AnyEvent::Subprocess::Delegate - role representing a delegate
+
+=head1 VERSION
+
+version 1.102910
 
 =head1 DESCRIPTION
 
@@ -40,3 +50,20 @@ per class.
 L<AnyEvent::Subprocess>
 
 L<AnyEvent::Subprocess::Role::WithDelegates>
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
+

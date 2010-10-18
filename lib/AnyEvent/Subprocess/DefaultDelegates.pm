@@ -1,4 +1,9 @@
 package AnyEvent::Subprocess::DefaultDelegates;
+BEGIN {
+  $AnyEvent::Subprocess::DefaultDelegates::VERSION = '1.102910';
+}
+# ABSTRACT: sets up default delegate name/builder mappings
+
 use strict;
 use warnings;
 use Carp qw(confess);
@@ -120,11 +125,17 @@ register_delegate( 'Timeout', sub {
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
-AnyEvent::Subprocess::Delegates - sets up default delegate name/builder mappings
+AnyEvent::Subprocess::DefaultDelegates - sets up default delegate name/builder mappings
+
+=head1 VERSION
+
+version 1.102910
 
 =head1 DELEGATES PROVIDED
 
@@ -201,3 +212,20 @@ seconds elapse.  See L<AnyEvent::Subprocess::Job::Delegate::Timeout>.
 =head1 SEE ALSO
 
 See the test suite to see all of these shortcuts in use.
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
+

@@ -1,4 +1,8 @@
 package AnyEvent::Subprocess::Job::Delegate::Callback;
+BEGIN {
+  $AnyEvent::Subprocess::Job::Delegate::Callback::VERSION = '1.102910';
+}
+# ABSTRACT: call callbacks for each job/run/done step
 use AnyEvent::Subprocess::Running::Delegate::Callback;
 use Moose;
 use MooseX::StrictConstructor;
@@ -73,3 +77,28 @@ sub receive_child_error {
 1;
 
 __PACKAGE__->meta->make_immutable;
+
+__END__
+=pod
+
+=head1 NAME
+
+AnyEvent::Subprocess::Job::Delegate::Callback - call callbacks for each job/run/done step
+
+=head1 VERSION
+
+version 1.102910
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
