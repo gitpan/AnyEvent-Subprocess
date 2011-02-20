@@ -29,7 +29,7 @@ my %WriteMakefileArgs = (
     'AnyEvent::Handle' => '0',
     'AnyEvent::Util' => '0',
     'Carp' => '0',
-    'EV' => '3.9',
+    'EV' => '4.0',
     'Event::Join' => '0.05',
     'IO::Pty' => '0',
     'JSON' => '2',
@@ -47,7 +47,7 @@ my %WriteMakefileArgs = (
     'namespace::autoclean' => '0',
     'namespace::clean' => '0'
   },
-  'VERSION' => '1.102910',
+  'VERSION' => '1.102911',
   'test' => {
     'TESTS' => 't/*.t'
   }

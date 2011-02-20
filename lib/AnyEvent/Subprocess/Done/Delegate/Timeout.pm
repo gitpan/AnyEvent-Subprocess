@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Done::Delegate::Timeout;
 BEGIN {
-  $AnyEvent::Subprocess::Done::Delegate::Timeout::VERSION = '1.102910';
+  $AnyEvent::Subprocess::Done::Delegate::Timeout::VERSION = '1.102911';
 }
 # ABSTRACT: done delegate for a job that can time out
 use Moose;
@@ -28,7 +28,7 @@ AnyEvent::Subprocess::Done::Delegate::Timeout - done delegate for a job that can
 
 =head1 VERSION
 
-version 1.102910
+version 1.102911
 
 =head1 ATTRIBUTES
 
@@ -42,7 +42,7 @@ Jonathan Rockway <jrockway@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+This software is copyright (c) 2011 by Jonathan Rockway.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

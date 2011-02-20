@@ -1,6 +1,7 @@
 Changes
 LICENSE
 MANIFEST
+META.json
 META.yml
 Makefile.PL
 README
@@ -50,6 +51,7 @@ t/external-process.t
 t/handle-leftovers.t
 t/kill.t
 t/monitorhandle.t
+t/negative-one.t
 t/open-to-fd.t
 t/pty-basic.t
 t/pty-control.t

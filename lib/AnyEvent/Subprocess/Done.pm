@@ -1,11 +1,13 @@
 package AnyEvent::Subprocess::Done;
 BEGIN {
-  $AnyEvent::Subprocess::Done::VERSION = '1.102910';
+  $AnyEvent::Subprocess::Done::VERSION = '1.102911';
 }
 # ABSTRACT: represents a completed subprocess run
 use Moose;
+use namespace::autoclean;
 
 use AnyEvent::Subprocess::Types qw(DoneDelegate);
+use POSIX qw(WIFEXITED WEXITSTATUS WIFSIGNALED WIFEXITED WTERMSIG);
 
 with 'AnyEvent::Subprocess::Role::WithDelegates' => {
     type => DoneDelegate,
@@ -19,7 +21,7 @@ has 'exit_status' => (
     required => 1,
 );
 
-has 'dumped_core' => (
+has [qw[dumped_core exited]] => (
     is         => 'ro',
     isa        => 'Bool',
     lazy_build => 1,
@@ -31,18 +33,24 @@ has [qw[exit_value exit_signal]] => (
     lazy_build => 1,
 );
 
+sub _build_exited {
+    my $self = shift;
+    return WIFEXITED($self->exit_status);
+}
+
 sub _build_exit_value {
     my $self = shift;
-    return $self->exit_status >> 8;
+    return WEXITSTATUS($self->exit_status);
 }
 
 sub _build_exit_signal {
     my $self = shift;
-    return $self->exit_status & 127;
+    return WIFSIGNALED($self->exit_status) && WTERMSIG($self->exit_status);
 }
 
 sub _build_dumped_core {
     my $self = shift;
+    return 0 if $self->exit_status < 0;
     return $self->exit_status & 128;
 }
 
@@ -65,7 +73,7 @@ AnyEvent::Subprocess::Done - represents a completed subprocess run
 
 =head1 VERSION
 
-version 1.102910
+version 1.102911
 
 =head1 SYNOPSIS
 
@@ -126,7 +134,7 @@ Jonathan Rockway <jrockway@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Jonathan Rockway <jrockway@cpan.org>.
+This software is copyright (c) 2011 by Jonathan Rockway.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
