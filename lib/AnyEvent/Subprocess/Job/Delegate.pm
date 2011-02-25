@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::VERSION = '1.102912';
 }
 # ABSTRACT: role that delegates on the Job class must implement
 use Moose::Role;
@@ -28,7 +28,7 @@ AnyEvent::Subprocess::Job::Delegate - role that delegates on the Job class must 
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Running::Delegate::Timeout;
 BEGIN {
-  $AnyEvent::Subprocess::Running::Delegate::Timeout::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Running::Delegate::Timeout::VERSION = '1.102912';
 }
 # ABSTRACT: Running part of Timeout delegate
 use Moose;
@@ -49,7 +49,7 @@ AnyEvent::Subprocess::Running::Delegate::Timeout - Running part of Timeout deleg
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Done::Delegate::State;
 BEGIN {
-  $AnyEvent::Subprocess::Done::Delegate::State::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Done::Delegate::State::VERSION = '1.102912';
 }
 # ABSTRACT: thread state through the job/run/done lifecycle
 use Moose;
@@ -23,7 +23,7 @@ AnyEvent::Subprocess::Done::Delegate::State - thread state through the job/run/d
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 

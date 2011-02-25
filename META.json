@@ -59,7 +59,7 @@
          "url" : "http://github.com/jrockway/anyevent-subprocess"
       }
    },
-   "version" : "1.102911",
+   "version" : "1.102912",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

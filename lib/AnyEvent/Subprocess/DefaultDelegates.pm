@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::DefaultDelegates;
 BEGIN {
-  $AnyEvent::Subprocess::DefaultDelegates::VERSION = '1.102911';
+  $AnyEvent::Subprocess::DefaultDelegates::VERSION = '1.102912';
 }
 # ABSTRACT: sets up default delegate name/builder mappings
 
@@ -135,7 +135,7 @@ AnyEvent::Subprocess::DefaultDelegates - sets up default delegate name/builder m
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DELEGATES PROVIDED
 

@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Delegate;
 BEGIN {
-  $AnyEvent::Subprocess::Delegate::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Delegate::VERSION = '1.102912';
 }
 # ABSTRACT: role representing a delegate
 use Moose::Role;
@@ -25,7 +25,7 @@ AnyEvent::Subprocess::Delegate - role representing a delegate
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 

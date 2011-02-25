@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Easy;
 BEGIN {
-  $AnyEvent::Subprocess::Easy::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Easy::VERSION = '1.102912';
 }
 # ABSTRACT: wrappers around AnyEvent::Subprocess to save typing in simple cases
 use strict;
@@ -81,7 +81,7 @@ AnyEvent::Subprocess::Easy - wrappers around AnyEvent::Subprocess to save typing
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 SYNOPSIS
 

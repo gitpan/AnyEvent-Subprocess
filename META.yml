@@ -40,7 +40,7 @@ requires:
   namespace::clean: 0
 resources:
   repository: http://github.com/jrockway/anyevent-subprocess
-version: 1.102911
+version: 1.102912
 x_Dist_Zilla:
   plugins:
     -

@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Role::WithDelegates;
 BEGIN {
-  $AnyEvent::Subprocess::Role::WithDelegates::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Role::WithDelegates::VERSION = '1.102912';
 }
 # ABSTRACT: paramaterized role consumed by classes that have delegates
 use MooseX::Role::Parameterized;
@@ -123,7 +123,7 @@ AnyEvent::Subprocess::Role::WithDelegates - paramaterized role consumed by class
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 

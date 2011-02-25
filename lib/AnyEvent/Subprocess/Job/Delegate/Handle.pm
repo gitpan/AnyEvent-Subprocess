@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate::Handle;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::Handle::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::Handle::VERSION = '1.102912';
 }
 # ABSTRACT: share a filehandle or socket with the child
 use AnyEvent;
@@ -179,7 +179,7 @@ AnyEvent::Subprocess::Job::Delegate::Handle - share a filehandle or socket with 
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 INITARGS
 

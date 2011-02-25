@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Role::WithDelegates::Manager;
 BEGIN {
-  $AnyEvent::Subprocess::Role::WithDelegates::Manager::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Role::WithDelegates::Manager::VERSION = '1.102912';
 }
 # ABSTRACT: manage delegate shortcuts
 use strict;
@@ -69,7 +69,7 @@ AnyEvent::Subprocess::Role::WithDelegates::Manager - manage delegate shortcuts
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 

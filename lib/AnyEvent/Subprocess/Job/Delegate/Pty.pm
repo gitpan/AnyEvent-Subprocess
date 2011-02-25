@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate::Pty;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::Pty::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::Pty::VERSION = '1.102912';
 }
 # ABSTRACT: give the child a pseudo-terminal
 use IO::Pty;
@@ -141,7 +141,7 @@ AnyEvent::Subprocess::Job::Delegate::Pty - give the child a pseudo-terminal
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 

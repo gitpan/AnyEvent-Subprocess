@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess;
 BEGIN {
-  $AnyEvent::Subprocess::VERSION = '1.102911';
+  $AnyEvent::Subprocess::VERSION = '1.102912';
 }
 # ABSTRACT: flexible, OO, asynchronous process spawning and management
 use Moose;
@@ -26,7 +26,7 @@ AnyEvent::Subprocess - flexible, OO, asynchronous process spawning and managemen
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 SYNOPSIS
 

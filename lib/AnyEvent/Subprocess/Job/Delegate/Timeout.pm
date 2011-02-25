@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate::Timeout;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::Timeout::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::Timeout::VERSION = '1.102912';
 }
 # ABSTRACT: Kill a subprocess if it takes too long
 use Moose;
@@ -71,7 +71,7 @@ AnyEvent::Subprocess::Job::Delegate::Timeout - Kill a subprocess if it takes too
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 SYNOPSIS
 

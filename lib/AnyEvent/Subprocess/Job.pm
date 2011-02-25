@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job;
 BEGIN {
-  $AnyEvent::Subprocess::Job::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::VERSION = '1.102912';
 }
 # ABSTRACT: role representing a runnable job
 
@@ -144,7 +144,7 @@ AnyEvent::Subprocess::Job - role representing a runnable job
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 ATTRIBUTES
 

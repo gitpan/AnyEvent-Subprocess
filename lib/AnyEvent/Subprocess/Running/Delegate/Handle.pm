@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Running::Delegate::Handle;
 BEGIN {
-  $AnyEvent::Subprocess::Running::Delegate::Handle::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Running::Delegate::Handle::VERSION = '1.102912';
 }
 # ABSTRACT: Running part of the Handle delegate
 use AnyEvent::Subprocess::Handle;
@@ -82,7 +82,7 @@ AnyEvent::Subprocess::Running::Delegate::Handle - Running part of the Handle del
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate::PrintError;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::PrintError::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::PrintError::VERSION = '1.102912';
 }
 # ABSTRACT: Print errors to a filehandle
 use Moose;
@@ -52,7 +52,7 @@ AnyEvent::Subprocess::Job::Delegate::PrintError - Print errors to a filehandle
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 AUTHOR
 

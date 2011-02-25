@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Done::Delegate::Timeout;
 BEGIN {
-  $AnyEvent::Subprocess::Done::Delegate::Timeout::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Done::Delegate::Timeout::VERSION = '1.102912';
 }
 # ABSTRACT: done delegate for a job that can time out
 use Moose;
@@ -28,7 +28,7 @@ AnyEvent::Subprocess::Done::Delegate::Timeout - done delegate for a job that can
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 ATTRIBUTES
 

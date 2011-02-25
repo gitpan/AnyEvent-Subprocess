@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Running;
 BEGIN {
-  $AnyEvent::Subprocess::Running::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Running::VERSION = '1.102912';
 }
 # ABSTRACT: represents a running subprocess
 use Moose;
@@ -133,7 +133,7 @@ AnyEvent::Subprocess::Running - represents a running subprocess
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 SYNOPSIS
 

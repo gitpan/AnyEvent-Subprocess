@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate::CaptureHandle;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::CaptureHandle::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::CaptureHandle::VERSION = '1.102912';
 }
 # ABSTRACT: capture the data that comes in via a handle
 use Moose;
@@ -52,7 +52,7 @@ AnyEvent::Subprocess::Job::Delegate::CaptureHandle - capture the data that comes
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate::CompletionCondvar;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::CompletionCondvar::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::CompletionCondvar::VERSION = '1.102912';
 }
 # ABSTRACT: provide a condvar to indicate completion
 use AnyEvent::Subprocess::Running::Delegate::CompletionCondvar;
@@ -36,7 +36,7 @@ AnyEvent::Subprocess::Job::Delegate::CompletionCondvar - provide a condvar to in
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Running::Delegate;
 BEGIN {
-  $AnyEvent::Subprocess::Running::Delegate::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Running::Delegate::VERSION = '1.102912';
 }
 # ABSTRACT: delegate on the running process class
 use Moose::Role;
@@ -50,7 +50,7 @@ AnyEvent::Subprocess::Running::Delegate - delegate on the running process class
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 REQUIRED METHODS
 

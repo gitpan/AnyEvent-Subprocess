@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Done::Delegate;
 BEGIN {
-  $AnyEvent::Subprocess::Done::Delegate::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Done::Delegate::VERSION = '1.102912';
 }
 # ABSTRACT: role that delegates on the Done class must implement
 use Moose::Role;
@@ -19,7 +19,7 @@ AnyEvent::Subprocess::Done::Delegate - role that delegates on the Done class mus
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 AUTHOR
 

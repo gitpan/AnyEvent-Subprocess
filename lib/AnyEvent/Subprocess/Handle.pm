@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Handle;
 BEGIN {
-  $AnyEvent::Subprocess::Handle::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Handle::VERSION = '1.102912';
 }
 # ABSTRACT: AnyEvent::Handle subclass with some additional methods for AnyEvent::Subprocess
 use strict;
@@ -98,7 +98,7 @@ AnyEvent::Subprocess::Handle - AnyEvent::Handle subclass with some additional me
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 

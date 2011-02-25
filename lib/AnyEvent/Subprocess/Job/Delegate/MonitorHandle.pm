@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate::MonitorHandle;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::MonitorHandle::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::MonitorHandle::VERSION = '1.102912';
 }
 # ABSTRACT: monitor a handle for input and invoke callbacks with that input
 use AnyEvent::Subprocess::Running::Delegate::MonitorHandle;
@@ -100,7 +100,7 @@ AnyEvent::Subprocess::Job::Delegate::MonitorHandle - monitor a handle for input 
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 

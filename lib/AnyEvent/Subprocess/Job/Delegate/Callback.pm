@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Job::Delegate::Callback;
 BEGIN {
-  $AnyEvent::Subprocess::Job::Delegate::Callback::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Job::Delegate::Callback::VERSION = '1.102912';
 }
 # ABSTRACT: call callbacks for each job/run/done step
 use AnyEvent::Subprocess::Running::Delegate::Callback;
@@ -87,7 +87,7 @@ AnyEvent::Subprocess::Job::Delegate::Callback - call callbacks for each job/run/
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 AUTHOR
 

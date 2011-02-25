@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Types;
 BEGIN {
-  $AnyEvent::Subprocess::Types::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Types::VERSION = '1.102912';
 }
 # ABSTRACT: C<MooseX::Types> used internally
 use MooseX::Types -declare => [ qw{
@@ -53,7 +53,7 @@ AnyEvent::Subprocess::Types - C<MooseX::Types> used internally
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 TYPES
 

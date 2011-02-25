@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Done;
 BEGIN {
-  $AnyEvent::Subprocess::Done::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Done::VERSION = '1.102912';
 }
 # ABSTRACT: represents a completed subprocess run
 use Moose;
@@ -73,7 +73,7 @@ AnyEvent::Subprocess::Done - represents a completed subprocess run
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 SYNOPSIS
 

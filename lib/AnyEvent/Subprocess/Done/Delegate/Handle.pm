@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Done::Delegate::Handle;
 BEGIN {
-  $AnyEvent::Subprocess::Done::Delegate::Handle::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Done::Delegate::Handle::VERSION = '1.102912';
 }
 # ABSTRACT: store leftover wbuf/rbuf from running Handle
 use Moose;
@@ -34,7 +34,7 @@ AnyEvent::Subprocess::Done::Delegate::Handle - store leftover wbuf/rbuf from run
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 ATTRIBUTES
 

@@ -1,6 +1,6 @@
 package AnyEvent::Subprocess::Running::Delegate::Callback;
 BEGIN {
-  $AnyEvent::Subprocess::Running::Delegate::Callback::VERSION = '1.102911';
+  $AnyEvent::Subprocess::Running::Delegate::Callback::VERSION = '1.102912';
 }
 # ABSTRACT: the C<Running> part of the Callback delegate
 use Moose;
@@ -53,7 +53,7 @@ AnyEvent::Subprocess::Running::Delegate::Callback - the C<Running> part of the C
 
 =head1 VERSION
 
-version 1.102911
+version 1.102912
 
 =head1 DESCRIPTION
 
